@@ -25,16 +25,15 @@ Android Studio编写NDK
         }
 ```  
 ## step8  
-配置项目的gradle.properties下添加  
-> android.useDeprecatedNdk=true  
-## step9  
-在测试类中加载ndk模块,此处的名称一定要与  bulid.gradle中的ndk中的modleName一致  
+配置项目的gradle.properties下添加 `android.useDeprecatedNdk=true`  
+## step9   
+在测试类中加载ndk模块,此处的名称一定要与  bulid.gradle中的ndk中的modleName一致   
 ```
 static {
         System.loadLibrary("YanboberJniLibName");	//defaultConfig.ndk.moduleName
     }
 ```  
-## step10  
+## step10   
 在Activity中运native方法，创建测试类对象调用native方法  
 
 
