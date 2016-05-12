@@ -35,6 +35,19 @@ static {
 ```  
 ## step10   
 在Activity中运native方法，创建测试类对象调用native方法  
+## step11  
+执行完上述操作后就会在项目目录的\build\intermediates\ndk\lib\不同平台下生成对应的.so文件  
+## 项目中引入.so  
+* 在module模块的libs文件夹下添加不同平台的.so  
+* 在bild.gradle中引入.so,在android{}里  
+```
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+```  
+
 
 
 
